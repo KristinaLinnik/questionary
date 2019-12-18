@@ -1,0 +1,72 @@
+details.select_container {
+  display: inline-block;
+  max-width: 320px;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  color: #c8c8c8;
+  font-size: 24px;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  z-index: 3;
+}
+
+details.select_container[open] {
+}
+details.select_container summary::after {
+  content: "\00203A";
+  position: absolute;
+  right: 12px;
+  top: calc(50%);
+  transform: translateY(-50%) rotate(90deg);
+  pointer-events: none;
+  color: #435993;
+  font-size: 2.8rem;
+}
+details.select_container[open] summary::after {
+  content: "\002039";
+}
+details.select_container summary {
+  cursor: pointer;
+  list-style: none;
+  &:focus{
+    outline: none;
+  }
+}
+details.select_container summary::-webkit-details-marker {
+  display: none;
+}
+details.select_container summary:hover {
+  background: #fff;
+}
+details.select_container .select {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  left: 2px;
+  background: #ffffff;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 4px 4px;
+}
+.select:checked{
+  color: #000;
+}
+details.select_container .select__option {
+  cursor: pointer;
+  padding: 6px 12px;
+  color: #515151;
+}
+details.select_container .select:hover .select__option.active {
+  background: #fff;
+  color: #000;
+}
+details.select_container .select:hover .select__option.active:hover,
+details.select_container .select__option:hover {
+  background: #007fff;
+  color: #fff;
+}
+details.select_container .select__option input {
+  display: none;
+}

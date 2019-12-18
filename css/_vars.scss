@@ -1,0 +1,45 @@
+@font-face{
+  font-family:"ProximaNova";
+  src: url("../font/ProximaNovaRegular.woff");
+  font-weight: normal;
+}
+@font-face{
+  font-family:"ProximaNovaBold";
+  src: url("../font/ProximaNovaBold.woff");
+  font-weight: bold;
+}
+@font-face{
+  font-family:"Roboto Thin";
+  src: url("../font/roboto/Roboto-Thin.ttf");
+}
+@font-face{
+  font-family:"Roboto Light";
+  src: url("../font/roboto/Roboto-Light.ttf");
+}
+$white: #fff;
+$yellow: #FEF000;
+$green: #22CD39;
+$black: #000;
+$fontColor: #1c1c1c;
+$max-width: 940px;
+$mainFont: 'Roboto Thin', sans-serif;
+$font: 'Roboto Light', sans-serif;
+
+@keyframes move {
+
+  0% {
+    right: 300px;
+  }
+  40% {
+    right: 200px;
+  }
+  60% {
+    right: 100px;
+  }
+  80%{
+    right: 50px
+  }
+  100%{
+    right: -10px;
+  }
+}

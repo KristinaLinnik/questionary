@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Анкета</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<section class="box">
+    <div class="hamburger-btn link" onclick="mobileMenu()">&#9776</div>
+    <nav class="main-nav">
+        <div class="nav-wrap">
+            <a href="#own-info" class="nav-link active">Личная информация</a>
+            <a href="#experience" class="nav-link">Опыт</a>
+            <a href="#js-level" class="nav-link">JavaScript</a>
+            <a href="#about" class="nav-link">О себе</a>
+        </div>
+    </nav>
+</section>
+
+<div class="main-wrap">
+    <div class="bg-wrap">
+        <h1 class="main-title">Анкета</h1>
+    </div>
+    <div class="questionary-wrap">
+        <div class="content-wrap">
+            <h2 class="common-title icon-1" id="own-info">Личная информация</h2>
+            <form class="questionary_form" action="#">
+                <div class="input-wrap">
+                    <input class="input-custom" type="text" id="fullName" value="Кристина Френкель" required/>
+                    <label for="fullName" class="floating-label">ФИО</label>
+                </div>
+                <details id="example_select" class="select_container">
+                    <summary>Год рождения</summary>
+                    <div class="select digits-option">
+                        <label class="select__option">
+                            <input type="radio" class="option" name="year" value="1989">1989
+                        </label>
+                        <label class="select__option">
+                            <input type="radio" class="option" name="year" value="1990" checked>1990
+                        </label>
+                        <label class="select__option">
+                            <input type="radio" class="option" name="year" value="1991">1991
+                        </label>
+                    </div>
+                </details>
+                <div class="input-wrap">
+                    <input class="input-custom" id="city" type="text" value="Черногория, г.Бар" required/>
+                    <label for="city" class="floating-label">Место проживания</label>
+                </div>
+                <div class="input-wrap">
+                    <input class="input-custom" type="text" id="skype"  value="stylistkris" required/>
+                    <label for="skype" class="floating-label">Skype</label>
+                </div>
+                <div class="input-wrap">
+                    <input class="input-custom" id="email" type="email" value="func.kris@gmail.com" required pattern="\S+@[a-z]+.[a-z]+"/>
+                    <label for="email" class="floating-label">E-mail</label>
+                </div>
+            </form>
+        <section class="about-experience" id="experience">
+            <h2 class="common-title icon-2">Расскажите о своем опыте</h2>
+            <form class="checkbox_form" action="#">
+                <div class="checkbox_column">
+                    <div class="checkbox-wrap">
+                        <input id="bem" type="checkbox" checked>
+                        <label for="bem" class="checkbox-custom">БЭМ/OOCSS</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input id="stylus" type="checkbox" checked>
+                        <label for="stylus" class="checkbox-custom">Stylus/LESS/SASS</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input id="svg" type="checkbox" checked>
+                        <label for="svg" class="checkbox-custom">Работаю с SVG</label>
+                    </div>
+                </div>
+                <div class="checkbox_column">
+                    <div class="checkbox-wrap">
+                        <input id="semantic" type="checkbox" checked>
+                        <label for="semantic" class="checkbox-custom">Верстаю семантично</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input id="js" type="checkbox" checked>
+                        <label for="js" class="checkbox-custom">ES2015/ES2016</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input id="gulp" type="checkbox" checked>
+                        <label for="gulp" class="checkbox-custom">Gulp/GRUNT</label>
+                    </div>
+                </div>
+                <div class="checkbox_column">
+                    <div class="checkbox-wrap">
+                        <input id="webpack" type="checkbox" checked>
+                        <label for="webpack" class="checkbox-custom">Webpack</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input id="jQuery" type="checkbox" checked>
+                        <label for="jQuery" class="checkbox-custom">jQuery</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input id="git" type="checkbox" checked>
+                        <label for="git" class="checkbox-custom">Ипользую Git</label>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="js-level" id="js-level">
+            <h2 class="common-title icon-3">Уровень владения JavaScript</h2>
+
+            <div class="range-wrap">
+                <ul class="range-blocks">
+                    <li class="junior">Не владею</li>
+                    <li class="middle">Использую готовые<br>
+                        решения
+                    </li>
+                    <li class="upper-middle">Использую готовые решения<br>
+                        и умею и переделывать
+                    </li>
+                    <li class="senior">Пишу сложный JS с нуля</li>
+                </ul>
+                <input
+                        type="range"
+                        class="range"
+                        name="level"
+                        min="0"
+                        max="100"
+                        value="60"
+                        id="panel_size">
+                <div class="border"></div>
+
+            </div>
+        </section>
+        <section class="about-your" id="about">
+            <h2 class="common-title icon-4">Расскажите о себе</h2>
+            <p class="about-desc">
+                Напишите несколько предложений, чем привлекла наша вакансия
+                и что вы ожидаете от работы у нас.
+            </p>
+            <form class="about-your_form">
+                    <textarea name="" id="" cols="30" rows="10">Здравствуйте,
+Мое имя Кристина, занимаюсь версткой три года, хочу вырасти до полноценного фронтендера. Последний год пишу небольшие скрипты и мне это нравится больше, чем простая верстка.
+
+Ваша вакансия заинтересовала развитием, командной разработкой и интересным тестовым заданием.
+На него у меня ушло около 12-ти часов. Некоторые нюансы описала в файле readMe.
+
+Еще пару моментов обо мне:
+
+в данный момент я работаю project - менеджером, верстаю для друзей программистов (по сути хобби получается :))
+Мечтаю уйти полностью в разработку, работала одно время с классной компанией, они пишут CRM для логистов, совмещала две работы (ух, это конечно ад был)), но рискнуть уйти сразу с основной работы не решилась, и не ошиблась, так как там ребята "крутятся сами (подозреваю, что на процент от прибыли)", а меня взяли на ставку. И вот спустя 3 месяца начали сильно задерживать зп (на полтора месяца), но мне такой вариант не подходит. В данный момент со мной полностью рассчитались и ждут в команду с января, но для меня важна стабильность, поэтому не спешу пока возвращаться к ним.
+Все таки надеюсь, что найду свою команду в которой смогу работать и развиваться полноценно и решусь таки оставить для себя только одну работу  :)
+
+Знаю, что давно должна была отправить  данное  задание, но раз уж оно готово, то как-то не очень оставлять его просто себе на память :)
+
+                    </textarea>
+                <button class="btn-submit">Готово</button>
+            </form>
+        </section>
+    </div>
+</div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
